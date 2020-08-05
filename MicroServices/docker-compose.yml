@@ -1,0 +1,183 @@
+version: '3'
+
+services:
+  eureka-server:
+    build: ./EurekaDiscoveryService
+    image: eureka-discovery:latest
+    ports:
+      - "8761:8761"
+    networks:
+      - appnetwork
+
+  mysql-admin-service:
+    image: mysql:latest
+    container_name: mysql-admin-service
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=admin-service
+    networks:
+      - appnetwork
+
+  mysql-market-info-service:
+    image: mysql:latest
+    container_name: mysql-market-info-service
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=market_info
+    networks:
+      - appnetwork
+
+  mysql-order-history-service:
+    image: mysql:latest
+    container_name: mysql-order-history-service
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=order_history
+    networks:
+      - appnetwork
+
+  mysql-product-catalog-service:
+    image: mysql:latest
+    container_name: mysql-product-catalog-service
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=productcatalogservicedb
+    networks:
+      - appnetwork
+
+
+
+  mysql-shipping-service:
+    image: mysql:latest
+    container_name: mysql-shipping-service
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=shippingdb
+    networks:
+      - appnetwork
+
+  mysql-shopping-cart-service:
+    image: mysql:latest
+    container_name: mysql-shopping-cart-service
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=shoppingcartdb
+    networks:
+      - appnetwork
+
+  market-info-service:
+    build: ./MarketInfoService
+    image: market-info:latest
+    depends_on:
+      - mysql-market-info-service
+      - eureka-server
+      - gateway
+    ports:
+      - "8086:8086"
+    environment:
+      - SPRING_DATASOURCE_URL= jdbc:mysql://localhost:3306/market_info?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_APPLICATION_NAME=market-info-service
+      - SPRING_PROFILES_ACTIVE=enableEureka
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eurekaserver:8761/eureka
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    networks:
+      - appnetwork
+
+  order-history-service:
+    build: ./OrderHistoryService
+    image: order-history:latest
+    depends_on:
+      - mysql-order-history-service
+      - eureka-server
+      - gateway
+    ports:
+      - "8087:8087"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/order_history?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_APPLICATION_NAME=order-history-service
+      - SPRING_PROFILES_ACTIVE=enableEureka
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eurekaserver:8761/eureka
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    networks:
+      - appnetwork
+
+  product-catalog-service:
+    build: ./ProductCatalogService
+    image: product-catalog:latest
+    depends_on:
+      - mysql-product-catalog-service
+      - eureka-server
+      - gateway
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_DATASOURCE_URL= jdbc:mysql://localhost:3306/productcatalogservicedb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_APPLICATION_NAME=product-catalog-service
+      - SPRING_PROFILES_ACTIVE=enableEureka
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eurekaserver:8761/eureka
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    networks:
+      - appnetwork
+
+
+
+  shipping-service:
+    build: ./ShippingService
+    image: shipping:latest
+    depends_on:
+      - mysql-shipping-service
+      - eureka-server
+      - gateway
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL= jdbc:mysql://localhost:3306/shippingdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_APPLICATION_NAME=shipping-service
+      - SPRING_PROFILES_ACTIVE=enableEureka
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eurekaserver:8761/eureka
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    networks:
+      - appnetwork
+
+  shopping-cart-service:
+    build: ./ShoppingCartService
+    image: shopping-cart:latest
+    depends_on:
+      - mysql-shopping-cart-service
+      - eureka-server
+      - gateway
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL= jdbc:mysql://localhost:3306/shoppingcartdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_APPLICATION_NAME=shopping-cart-service
+      - SPRING_PROFILES_ACTIVE=enableEureka
+      - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eurekaserver:8761/eureka
+      - SPRING_RABBITMQ_HOST=rabbitmq
+    networks:
+      - appnetwork
+      
+  gateway:
+    build: ./AdminService
+    image: admin:latest
+    depends_on:
+        - eureka-server
+        - mysql-admin-service
+    ports:
+        - "8084:8084"
+    environment:
+        - SPRING_APPLICATION_NAME =AdminService
+        - SPRING_PROFILES_ACTIVE=enableEureka
+        - EUREKA_INSTANCE_PREFER_IP_ADDRESS=true
+        - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka
+    networks:
+        - appnetwork
+  
+networks:
+  appnetwork:
+    driver: bridge

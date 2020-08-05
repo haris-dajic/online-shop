@@ -1,0 +1,48 @@
+.custom {
+    width: 145px !important;
+    border-radius: 5px;
+}
+
+/* @media only screen and (max-width: 1112px) {
+    #cancelOrderBtn {
+        margin-top: 5px;
+    }
+  } */
+
+select.ng-valid.ng-touched, input.ng-valid.ng-touched {
+    border-color: #28a745;
+}
+
+select.ng-invalid.ng-touched, input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+}
+
+select.ng-valid.ng-touched:focus, input.ng-valid.ng-touched:focus {
+    border-color: #28a745;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(30, 255, 0, 0.6);
+}
+
+select.ng-invalid.ng-touched:focus, input.ng-invalid.ng-touched:focus {
+    border-color: #dc3545;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+#optionBar {
+    padding: 20px;
+}
+
+#optionBar div {
+    font-size: 26px;
+}
+#optionBar a, strong {
+    color: gray;
+}
+
+#optionBar a:hover {
+    color: black !important;
+    text-decoration: none;
+}
+
+#bottomHr {
+    margin-top: 0em;
+}

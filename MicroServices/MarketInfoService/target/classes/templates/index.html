@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online market</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">        
+    <base href="/market/">
+</head>
+
+<body>
+
+    <header ng-include="'pages/header.html'"></header>
+    
+    <main ng-view></main>
+
+    <footer ng-include="'pages/footer.html'"></footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>        
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+    <script src="js/angular-css.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/headerController.js"></script>
+    <script src="js/app/productCatalogController.js"></script>
+    <script src="js/app/marketInfoController.js"></script>
+</body>
+</html>

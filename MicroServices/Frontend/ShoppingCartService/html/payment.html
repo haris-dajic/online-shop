@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="paymentApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--Bootstrap-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <!--Font Awesome Icons-->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossorigin="anonymous">
+        <!--Custom CSS-->
+        <link href="../css/payment.css" rel="stylesheet">
+    </head>
+    <body ng-controller="paymentController">
+        <div class="container" id="optionBar">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <strong>1. Korpa</strong>
+                </div>
+                <div class="col-md-4 text-center">
+                    <strong>2. Detalji isporuke</strong>
+                </div>
+                <div class="col-md-4 text-center">
+                    <strong class="active">3. Način plaćanja</strong>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-sm-7">
+                    <h4>
+                        Način plaćanja
+                    </h4>
+                    <hr>
+                    <form
+                        class="needs-validation"
+                        novalidate=""
+                        name="paymentForm"
+                        action="#/productCatalog"
+                        ng-submit="paymentDone()">
+                        <!--Ime i prezime vlasnika-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="cc-name">Ime i prezime vlasnika kartice</label>
+                                    <input
+                                        ng-model="model.ccName"
+                                        type="text"
+                                        class="form-control"
+                                        id="cc-name"
+                                        name="ccName"
+                                        placeholder=""
+                                        required="required"
+                                        ng-pattern="/^[a-zšđčćA-ZŠĐČĆ]+(([',. -][a-zšđčćA-ZŠĐČĆ ])?[a-zšđčćA-ZŠĐČĆ]*)*$/">
+                                    <div
+                                        ng-show="paymentForm.ccName.$invalid && paymentForm.ccName.$dirty"
+                                        class="text-danger text-justify">
+                                        <small>Ime i prezime vlasnika kartice nije validno.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Broj kartice-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="cc-number">Broj kreditne kartice</label>
+                                    <input
+                                        ng-model="model.ccNumber"
+                                        type="text"
+                                        class="form-control"
+                                        id="cc-number"
+                                        name="ccNumber"
+                                        placeholder="1234123412341234"
+                                        required="required"
+                                        ng-pattern="/^((4\d{3})|(5[1-5]\d{2})|(6011))-?\d{4}-?\d{4}-?\d{4}|3[4,7]\d{12}$/">
+                                    <div
+                                        ng-show="paymentForm.ccNumber.$invalid && paymentForm.ccNumber.$dirty"
+                                        class="text-danger text-justify">
+                                        <small>
+                                            Broj kreditne kartice nije validan.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Datum isteka-->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="cc-expiration">Važi do</label>
+                                    <input
+                                        ng-model="model.ccExpiration"
+                                        type="text"
+                                        class="form-control"
+                                        id="cc-expiration"
+                                        name="ccExpiration"
+                                        placeholder="07/21"
+                                        required="required"
+                                        ng-pattern="/^[0-9]{2}\/[0-9]{2}$/">
+                                    <div
+                                        ng-show="paymentForm.ccExpiration.$invalid && paymentForm.ccExpiration.$dirty"
+                                        class="text-danger">
+                                        <small>Datum isteka kartice nije validan.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--CVV-->
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="cc-cvv">CVV</label>
+                                    <input
+                                        ng-model="model.cvv"
+                                        type="text"
+                                        class="form-control"
+                                        id="cc-cvv"
+                                        name="cvv"
+                                        placeholder="000"
+                                        required="required"
+                                        ng-pattern="/^[1-9][0-9]{2}$/">
+                                    <div
+                                        ng-show="paymentForm.cvv.$invalid && paymentForm.cvv.$dirty"
+                                        class="text-danger">
+                                        <small>Sigurnosni kod (CVV) nije validan.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mb-3" id="bottomHr">
+
+                        <div>
+                            <button
+                                type="submit"
+                                class="btn btn-success custom"
+                                ng-disabled="paymentForm.$invalid">Završi plaćanje</button>
+                            <a
+                                href="#/shipping"
+                                role="button"
+                                class="btn btn-danger custom"
+                                id="cancelOrderBtn">Nazad</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-sm-5">
+                    <h4>Račun</h4>
+                    <hr>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h6 class="text-justify">Naziv proizvoda: Lorem ipsum dolor.
+                                        {{model.name}}</h6>
+                                    <h6 class="text-justify">Kratak opis: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        {{model.decription}}</h6>
+                                    <h6 class="text-justify">Cijena: Lorem ips.
+                                        {{model.price}}</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h6 class="text-justify">NAZIV: Lorem ipsum dolor.
+                                        {{model.name}}</h6>
+                                    <h6 class="text-justify">KRATAK OPIS: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        {{model.decription}}</h6>
+                                    <h6 class="text-justify">CIJENA: Lorem ips.
+                                        {{model.price}}</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>CIJENA BEZ PDV-a</h6>
+                            </div>
+                            <span class="text-muted">{{model.raw}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>PDV</h6>
+                            </div>
+                            <span class="text-muted">{{model.tax}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>ISPORUKA</h6>
+                            </div>
+                            <span class="text-muted">{{model.shippment}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>POPUST</h6>
+                            </div>
+                            <span class="text-muted">{{model.discount}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>
+                                <strong>UKUPNO (BAM)</strong>
+                            </span>
+                            <strong>{{model.total}}</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Custom js-->
+        <script src="./js/paymentApp.js"></script>
+        <script src="./js/paymentController.js"></script>
+    </body>
+</html>

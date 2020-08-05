@@ -1,0 +1,59 @@
+.scrollbar-deep-purple::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.scrollbar-deep-purple::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-deep-purple::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #2d96a8;
+}
+
+.scrollbar-dusty-grass::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.bordered-deep-purple::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    border: 1px solid #2d96a8;
+}
+
+.bordered-deep-purple::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: none;
+}
+
+.thin::-webkit-scrollbar {
+    width: 6px;
+}
+
+.orderScrollBarSolo {
+    position: relative;
+    overflow-y: scroll;
+    height: 180px;
+}
+
+.orderScrollBarPair {
+    position: relative;
+    overflow-y: scroll;
+    height: 360px;
+}
+
+.orderScrollBar {
+    position: relative;
+    overflow-y: scroll;
+    height: 540px;
+}
+
+.detailsScrollBar {
+    position: relative;
+    overflow-y: scroll;
+    height: 268px;
+}

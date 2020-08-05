@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="app" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Online Market Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body ng-controller="mainController">
+
+    <div class="containter d-flex flex column" id="mainWrapper">
+        <nav
+                class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+                id="navBar">
+    
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-store"></i>
+                Online Market
+            </a>
+    
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">                 
+                    <li class="nav-item">
+                        <a class="btn btn-warning" href="login" role="button">                            
+                        Prijava
+                        </a>
+                    </li>         
+                    <li class="nav-item">
+                        <a class="btn btn-info" href="register" role="button">                            
+                        Registracija
+                        </a>
+                    </li>                 
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div id="loginFrame" class="col-lg-6 offset-lg-3 col-12 jumbotron">
+            <form name='loginForm' action="login" method="POST">
+                <div class="form-group">                       
+                    <input type="email" class="form-control" name="username" ng-model="loginFormValues.email" ng-required="true" placeholder="Email Adresa"/>
+                    <small class="form-text text-danger" ng-show="(loginForm.username.$touched || loginForm.$submitted) && loginForm.username.$error.required" ng-required='true'>Neophodno!</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" ng-model="loginFormValues.password" ng-required="true" placeholder="Password"/>
+                    <small class="form-text text-danger" ng-show="(loginForm.password.$touched || loginForm.$submitted) && loginForm.password.$error.required" ng-required='true'>Neophodno!</small>
+                </div>
+                <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg">Login</button>
+                <label th:if="${param.error}" class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" >Neispravan email ili password</label>
+            </form>
+        </div>
+    </div>
+
+    <footer class="fixed-bottom" id="navFooter">
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="container text-center">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Kontakt
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feedback">Feedback</a>
+                    </li>                    
+                </ul>
+            </div>
+        </nav>
+        <div class="text-center bg-light" id="copyrightFooter">
+            <i class="far fa-copyright"></i>
+            Online Market
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/mainController.js"></script>
+</body>
+</html>

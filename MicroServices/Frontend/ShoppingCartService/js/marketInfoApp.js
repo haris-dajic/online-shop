@@ -1,0 +1,1 @@
+var marketInfoApp = angular.module('marketInfoApp', []);

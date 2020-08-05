@@ -1,0 +1,7 @@
+com.onlineMarket.MarketInfoService
+com.onlineMarket.MarketInfoService.Controller
+com.onlineMarket.MarketInfoService.CustomExceptionHandlers
+com.onlineMarket.MarketInfoService.Models
+com.onlineMarket.MarketInfoService.Repositories
+com.onlineMarket.MarketInfoService.Service
+com.onlineMarket.MarketInfoService.ServiceImplementation

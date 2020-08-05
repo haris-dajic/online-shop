@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="app" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Online Market Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body ng-controller="mainController">
+    <div class="containter d-flex flex column" id="mainWrapper">
+        <nav
+                class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+                id="navBar">
+    
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-store"></i>
+                Online Market
+            </a>
+    
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">                 
+                    <li class="nav-item">
+                        <a class="btn btn-warning" href="login" role="button">                            
+                        Prijava
+                        </a>
+                    </li>         
+                    <li class="nav-item">
+                        <a class="btn btn-info" href="register" role="button">                            
+                        Registracija
+                        </a>
+                    </li>                 
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div id="registrationFrame" class="col-lg-6 offset-lg-3 col-12 jumbotron">
+            <form name='registrationForm' ng-submit='register(registrationFormValues)'>
+                <div class='form-group'>
+                    <label class="font-weight-bold">Ime</label>
+                    <input type="text" class="form-control" name="name" ng-model="registrationFormValues.name" ng-required='true' ng-pattern='/^([A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}($|(\\s{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}|(-{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1})$/' placeholder="Ime"/>
+                    <small class="form-text text-danger" ng-show="(registrationForm.name.$touched || registrationForm.$submitted) && registrationForm.name.$error.required">Neophodno!</small>
+                    <small class="form-text text-danger" ng-show="(registrationForm.name.$touched || registrationForm.$submitted) && registrationForm.name.$error.pattern">Neispravan unos imena!</small>
+                </div>
+                <div class='form-group'>
+                    <label class="font-weight-bold">Prezime</label>
+                    <input type="text" class="form-control" name="surname" ng-model="registrationFormValues.surname" ng-required='true' ng-pattern='/^([A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}($|(\\s{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}|(-{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1})$/' placeholder="Prezime"/>
+                    <small class="form-text text-danger" ng-show="(registrationForm.surname.$touched || registrationForm.$submitted) && registrationForm.surname.$error.required">Neophodno!</small>
+                    <small class="form-text text-danger" ng-show="(registrationForm.surname.$touched || registrationForm.$submitted) && registrationForm.surname.$error.pattern">Neispravan unos prezimena!</small>
+                </div>
+                <div class='form-group'>
+                    <label class="font-weight-bold">Adresa</label>
+                    <input type="text" class="form-control" name="address" ng-model="registrationFormValues.address" ng-required='true' placeholder="Adresa" ng-pattern="/^([A-ZŽŠĐĆČ]{1}[a-zšđžćč]{1,15}\s+){1,5}(b\.b\.|\d+)$/"/>
+                    <small class="form-text text-danger" ng-show="(registrationForm.address.$touched || registrationForm.$submitted) && registrationForm.address.$error.required">Neophodno!</small>
+                    <small class="form-text text-danger" ng-show="(registrationForm.address.$touched || registrationForm.$submitted) && registrationForm.address.$error.pattern">Neispravan unos adrese!</small>
+                </div>
+                <div class='form-group'>
+                    <label class="font-weight-bold">Broj telefona</label>
+                    <input type="text" class="form-control" name="phoneNumber" ng-model="registrationFormValues.phoneNumber" ng-required='true' placeholder="Broj telefona" ng-pattern="/^[+][0-9]{10,17}$/"/>
+                    <small class="form-text text-danger" ng-show="(registrationForm.phoneNumber.$touched || registrationForm.$submitted) && registrationForm.phoneNumber.$error.required">Neophodno!</small>
+                    <small class="form-text text-danger" ng-show="(registrationForm.phoneNumber.$touched || registrationForm.$submitted) && registrationForm.phoneNumber.$error.pattern">Neispravan unos broja telefona! (+38762000000)</small>
+                    </div>
+                <div class='form-group'>
+                    <label class="font-weight-bold">Email Adresa</label>
+                    <input type="email" class="form-control" name="email" ng-model="registrationFormValues.email" ng-required='true' placeholder="Email Adresa" ng-pattern="/^[A-Za-z0-9-+_.]+@[a-zA-Z0-9-.]+\.(com|ba)$/"/>
+                    <small class="form-text text-danger" ng-show="(registrationForm.email.$touched || registrationForm.$submitted) && registrationForm.email.$error.required">Neophodno!</small>
+                    <small class="form-text text-danger" ng-show="(registrationForm.email.$touched || registrationForm.$submitted) && registrationForm.email.$error.pattern">Neispravan unos email adrese!</small>
+                </div>
+                <div class='form-group'>
+                    <label class="font-weight-bold">Password</label>
+                    <input type="password" class="form-control" name="password" ng-model="registrationFormValues.password" ng-required='true' placeholder="Password" ng-pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{7,}/"/>
+                    <small class="form-text text-danger" ng-show="(registrationForm.password.$touched || registrationForm.$submitted) && registrationForm.password.$error.required">Neophodno!</small>
+                    <small class="form-text text-danger" ng-show="(registrationForm.password.$touched || registrationForm.$submitted) && registrationForm.password.$error.pattern">Neispravan unos passworda!</small>
+                </div>
+                <div class='form-group'>
+                    <label class="font-weight-bold">Ponoviti Password</label>
+                    <input type="password" class="form-control" name="password2" ng-model="registrationFormValues.password2" ng-required='true' placeholder="Password"/>
+                    <small class="form-text text-danger" ng-show="(registrationForm.password2.$touched || registrationForm.$submitted) && registrationForm.password2.$error.required">Neophodno!</small>
+                    <small class="form-text text-danger" ng-show="passwordsMatch">Passwordi se ne podudaraju!</small>
+                </div>
+                <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg" formmethod="post">Registruj</button>
+                <label class="font-italic alert-success col-lg-6 offset-lg-3 col-12" ng-show="successfulRegistrationReply">{{successfulRegistrationReply}}</label>
+                <label class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" ng-show="unsuccessfulRegistrationReply">{{unsuccessfulRegistrationReply}}</label>
+            </form>
+        </div>
+    </div>
+
+    <footer class="fixed-bottom" id="navFooter">
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="container text-center">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Kontakt
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feedback">Feedback</a>
+                    </li>                    
+                </ul>
+            </div>
+        </nav>
+        <div class="text-center bg-light" id="copyrightFooter">
+            <i class="far fa-copyright"></i>
+            Online Market
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/mainController.js"></script>
+</body>
+</html>

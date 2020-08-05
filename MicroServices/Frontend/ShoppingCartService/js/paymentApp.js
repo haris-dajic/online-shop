@@ -1,0 +1,1 @@
+var paymentApp = angular.module('paymentApp', []);

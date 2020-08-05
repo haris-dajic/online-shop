@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="app" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Online Market Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body ng-controller="mainController">
+    <div class="containter d-flex flex column" id="mainWrapper">
+        <nav
+                class="navbar navbar-expand-lg fixed-top navbar-light bg-secondary"
+                id="navBar">
+    
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-store"></i>
+                Online Market
+            </a>
+    
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">                 
+                    <li class="nav-item">
+                        <a class="btn btn-warning" href="/login" role="button">                            
+                            Prijava
+                        </a>
+                    </li>         
+                    <li class="nav-item">
+                        <a class="btn btn-info" href="/register" role="button">                            
+                            Registracija
+                        </a>
+                    </li>              
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container pt-5 pb-5">
+        <div class="col-md-10 offset-md-1">
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <button id="button-addon7" type="submit" class="btn btn-success btn-lg"><i class="fa fa-search"></i></button>
+                    <input type="search" placeholder="Lokacija" aria-describedby="button-addon7" class="form-control-lg" ng-model="search">
+                </div>
+                
+            </div>
+            <!--<div class="input-group md-form form-sm form-1 pl-0 mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text lighten-3" id="basic-text1">
+                        <i class="fas fa-search text-white" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <input class="form-control my-0 py-1" type="text" placeholder="Lokacija" aria-label="Search" >
+            </div>-->
+            <div class="list-group" ng-repeat="location in locations | filter:search">
+                <a href="#" class="list-group-item list-group-item-action">{{location.name}}</a>           
+            </div>   
+        </div>    
+    </div>
+
+    <footer id="navFooter">
+        <nav class="navbar navbar-expand navbar-dark bg-secondary">
+            <div class="container text-center">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Kontakt
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feedback">Feedback</a>
+                    </li>                    
+                </ul>
+            </div>
+        </nav>
+        <div class="text-center bg-secondary text-white" id="copyrightFooter">
+            <i class="far fa-copyright"></i>
+            Online Market
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/mainController.js"></script>
+</body>
+</html>

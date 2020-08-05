@@ -1,0 +1,47 @@
+<div class="col-lg-10 offset-lg-1 col-12">
+    <form name="selectMarketForUpdatingForm" ng-hide="updateMarketID">
+        <input class="form-control mb-3" type="text" placeholder="Search" ng-model="updateMarketFormValues.search">
+        <ul class="list-group" ng-repeat="market in markets">                            
+            <li class="list-group-item list-group-item-action" ng-click="showUpdateMarketForm(market)">
+                <h5>{{market.name}}</h5>
+                <h6>{{market.email}}     |     {{market.contact}}</h6>
+                <h6>{{market.city}}     |     {{market.address}}</h6>
+            </li>                            
+        </ul>
+    </form>
+    <form name="updateMarketForm" ng-show="updateMarketID">
+        <div class='form-group'>
+            <label class="font-weight-bold">Naziv:</label>
+            <input type="text" class="form-control" name="name" ng-model="updateMarketFormValues.name" ng-required='true' ng-pattern='/^[A-ZČĆŽŠĐ][A-Za-z0-9\\s-čČćĆžŽšŠđĐ]*/' placeholder="Naziv"/>
+            <small class="form-text text-danger" ng-show="(updateMarketForm.name.$touched || updateMarketForm.$submitted) && updateMarketForm.name.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Kontakt:</label>
+            <input type="text" class="form-control" name="contact" ng-model="updateMarketFormValues.contact" ng-required='true' ng-pattern='/^[+][0-9]{10,17}$/' placeholder="Kontakt"/>
+            <small class="form-text text-danger" ng-show="(updateMarketForm.contact.$touched || updateMarketForm.$submitted) && updateMarketForm.contact.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Email:</label>
+            <input type="email" class="form-control" name="email" ng-model="updateMarketFormValues.email" ng-required='true' ng-pattern='/^[A-Za-z0-9-+_.]+@[a-zA-Z0-9-.]+\.(com|ba)$/' placeholder="Email"/>
+            <small class="form-text text-danger" ng-show="(updateMarketForm.email.$touched || updateMarketForm.$submitted) && updateMarketForm.email.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Grad:</label>
+            <input type="text" class="form-control" name="city" ng-model="updateMarketFormValues.city" ng-required='true' ng-pattern='/^[A-ZČŽŠĆĐ][a-zčžšćđ]+(?:[\\s-][A-ZČŽŠĆĐ][a-zčžšćđ]+)*$/' placeholder="Grad"/>
+            <small class="form-text text-danger" ng-show="(updateMarketForm.city.$touched || updateMarketForm.$submitted) && updateMarketForm.city.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Adresa:</label>
+            <input type="text" class="form-control" name="address" ng-model="updateMarketFormValues.address" ng-required='true' ng-pattern='/^([A-ZŽŠĐĆČ]{1}[a-zšđžćč]{1,15}\s+){1,5}(b\.b\.|\d+)$/' placeholder="Adresa"/>
+            <small class="form-text text-danger" ng-show="(updateMarketForm.address.$touched || updateMarketForm.$submitted) && updateMarketForm.address.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">URL slike:</label>
+            <input type="text" class="form-control" name="imageURL" ng-model="updateMarketFormValues.imageURL" ng-required='true' placeholder="URL slike"/>
+            <small class="form-text text-danger" ng-show="(updateMarketForm.imageURL.$touched || updateMarketForm.$submitted) && updateMarketForm.imageURL.$error.required">Neophodno!</small>
+        </div>
+        <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg mt-3" ng-click='updateMarket(updateMarketFormValues)'>Update</button>
+        <label class="font-italic alert-success col-lg-6 offset-lg-3 col-12" ng-show="successfulMarketReply">{{successfulMarketReply}}</label>
+        <label class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" ng-show="unsuccessfulMarketReply">{{unsuccessfulMarketReply}}</label>
+    </form>
+</div>

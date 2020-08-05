@@ -1,0 +1,69 @@
+<div class="col-lg-10 offset-lg-1 col-12">
+    <form name="selectMarketForProductUpdatingForm" ng-show="!updateProductFormShown">
+        <input class="form-control mb-3" type="text" placeholder="Search">
+        <ul class="list-group" ng-repeat="market in markets">                            
+                <li class="list-group-item list-group-item-action" ng-click="showUpdateProductForm(market.id)">
+                    <h5>{{market.name}}</h5>
+                    <h6>{{market.email}}     |     {{market.contact}}</h6>
+                    <h6>{{market.city}}     |     {{market.address}}</h6>
+                </li>                            
+        </ul>
+    </form>
+    <form name="selectProductforUpdatingForm" ng-show="!updateProductID && updateProductFormShown">
+        <input class="form-control mb-3" type="text" placeholder="Search" ng-model="updateProductFormValues.search">
+        <ul class="list-group" ng-repeat="productAmountInMarket in productAmount">
+            <li class="list-group-item list-group-item-action" ng-show="showRelevantProductOnUpdate(productAmountInMarket.market.id)" ng-click="showUpdateProductForm(productAmountInMarket.product, productAmountInMarket.amount)">
+                <h5>{{productAmountInMarket.product.name}}</h5>
+                <h6>Kategorija: {{productAmountInMarket.product.category}}</h6>
+                <h6>Kolicina: {{productAmountInMarket.amount}}     |     Cijena: {{productAmountInMarket.product.price}}</h6>
+                <h6>Akcijski procenat: {{productAmountInMarket.product.discount}}     |     Barkod: {{productAmountInMarket.product.barcode}}</h6>
+                <p>{{productAmountInMarket.product.description}}</p>
+            </li>
+        </ul>
+    </form>
+    <form name="updateProductForm" ng-show="updateProductID">
+        <div class='form-group'>
+            <label class="font-weight-bold">Naziv:</label>
+            <input type="text" class="form-control" name="name" ng-model="updateProductFormValues.name" ng-required='true' ng-pattern='/^[A-ZČĆŽŠĐ][A-Za-z0-9\\s-čČćĆžŽšŠđĐ]*/' placeholder="Naziv"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.name.$touched || updateProductForm.$submitted) && updateProductForm.name.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Kategorija:</label>
+            <input type="text" class="form-control" name="category" ng-model="updateProductFormValues.category" ng-required='true' ng-pattern='/^[A-Z][A-Za-z0-9\\s-čČćĆžŽšŠđĐ]*/' placeholder="Kategorija"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.category.$touched || updateProductForm.$submitted) && updateProductForm.category.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Količina:</label>
+            <input type="number" class="form-control" name="amount" ng-model="updateProductFormValues.amount" ng-required='true' placeholder="Količina"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.amount.$touched || updateProductForm.$submitted) && updateProductForm.amount.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Cijena:</label>
+            <input type="number" step="any" class="form-control" name="price" ng-model="updateProductFormValues.price" ng-required='true' placeholder="Cijena" min="0"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.price.$touched || updateProductForm.$submitted) && updateProductForm.price.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Akcijski procenat:</label>
+            <input type="number" step="any" class="form-control" name="discount" ng-model="updateProductFormValues.discount" ng-required='true' placeholder="Akcijski procenat" max="100"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.discount.$touched || updateProductForm.$submitted) && updateProductForm.discount.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Barkod:</label>
+            <input type="text" class="form-control" name="barcode" ng-model="updateProductFormValues.barcode" ng-required='true' ng-pattern='/[0-9]{8,}/' placeholder="Barkod"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.barcode.$touched || updateProductForm.$submitted) && updateProductForm.barcode.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Detalji:</label>
+            <input type="text" class="form-control" name="description" ng-model="updateProductFormValues.description" ng-required='true' placeholder="Detalji"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.description.$touched || updateProductForm.$submitted) && updateProductForm.description.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">URL slike:</label>
+            <input type="text" class="form-control" name="imageURL" ng-model="updateProductFormValues.imageURL" ng-required='true' placeholder="URL slike"/>
+            <small class="form-text text-danger" ng-show="(updateProductForm.imageURL.$touched || updateProductForm.$submitted) && updateProductForm.imageURL.$error.required">Neophodno!</small>
+        </div>
+        <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg mt-3" ng-click='updateProduct(updateProductFormValues)'>Update</button>
+        <label class="font-italic alert-success col-lg-6 offset-lg-3 col-12" ng-show="successfulProductReply">{{successfulProductReply}}</label>
+        <label class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" ng-show="unsuccessfulProductReply">{{unsuccessfulProductReply}}</label>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="col-lg-10 offset-lg-1 col-12">
+    <form name="selectMarketForProductDeletingForm" ng-show="!deleteProductFormShown">
+        <input class="form-control mb-3" type="text" placeholder="Search">
+        <ul class="list-group" ng-repeat="market in markets">                    
+            <li class="list-group-item list-group-item-action" ng-click="showDeleteProductForm(market.id)">
+                <h5>{{market.name}}</h5>
+                <h6>{{market.email}}     |     {{market.contact}}</h6>
+                <h6>{{market.city}}     |     {{market.address}}</h6>
+            </li>                            
+        </ul>
+    </form>
+    <form name="deleteProductForm" ng-show="deleteProductFormShown">
+        <input class="form-control mb-3" type="text" placeholder="Search" ng-model="deleteProductFormValues.search">
+        <ul class="list-group" ng-repeat="productAmountInMarket in productAmount">
+            <li class="list-group-item list-group-item-action" ng-show="showRelevantProductOnDelete(productAmountInMarket.market.id)" ng-click="addToDeleteList(productAmountInMarket.product.id)">
+                <h5>{{productAmountInMarket.product.name}}</h5>
+                <h6>Kategorija: {{productAmountInMarket.product.category}}</h6>
+                <h6>Kolicina: {{productAmountInMarket.amount}}     |     Cijena: {{productAmountInMarket.product.price}}</h6>
+                <h6>Akcijski procenat: {{productAmountInMarket.product.discount}}     |     Barkod: {{productAmountInMarket.product.barcode}}</h6>
+                <p>{{productAmountInMarket.product.description}}</p>
+            </li>
+        </ul>
+        <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg mt-3" ng-click='deleteProduct(product.id)'>Obriši</button>
+        <label class="font-italic alert-success col-lg-6 offset-lg-3 col-12" ng-show="successfulProductReply">{{successfulProductReply}}</label>
+        <label class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" ng-show="unsuccessfulProductReply">{{unsuccessfulProductReply}}</label>
+    </form>                    
+</div>

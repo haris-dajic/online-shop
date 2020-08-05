@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shippingApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--Bootstrap-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <!--Font Awesome Icons-->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossorigin="anonymous">
+        <!--Custom CSS-->
+        <link href="../css/shipping.css" rel="stylesheet">
+    </head>
+    <body ng-controller="shippingController">
+        <div class="container" id="optionBar">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <strong>1. Korpa</strong>
+                </div>
+                <div class="col-md-4 text-center">
+                    <strong class="active">2. Detalji isporuke</strong>
+                </div>
+                <div class="col-md-4 text-center">
+                    <strong>3. Način plaćanja</strong>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-sm-7">
+                    <h4>
+                        Detalji isporuke
+                    </h4>
+                    <hr>
+                    <div class="custom-control custom-checkbox">
+                        <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="diff-address"
+                            ng-model="checkDiffAddress">
+                        <label class="custom-control-label" for="diff-address">Isporuka za drugu osobu</label>
+                    </div>
+                    <hr>
+                    <form
+                        class="needs-validation"
+                        novalidate="novalidate"
+                        name="shippingForm"
+                        action="#/payment"
+                        ng-submit="goToPayment()">
+                        <fieldset ng-disabled="!(checkDiffAddress)">
+                            <!--Ime-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="firstName">Ime:</label>
+                                        <input
+                                            ng-model="model.firstName"
+                                            name="firstName"
+                                            type="text"
+                                            class="form-control"
+                                            id="firstName"
+                                            placeholder=""
+                                            value=""
+                                            required="required"
+                                            ng-pattern="/^([A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}($|(\\s{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}|(-{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1})$/">
+                                        <div
+                                            ng-show="checkDiffAddress && shippingForm.firstName.$invalid && shippingForm.firstName.$dirty"
+                                            class="text-danger text-justify">
+                                            <small>Ime nije validno. Ime ne može početi sa brojem ili malim slovom.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Prezime-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lastName">Prezime:</label>
+                                        <input
+                                            ng-model="model.lastName"
+                                            name="lastName"
+                                            type="text"
+                                            class="form-control"
+                                            id="lastName"
+                                            placeholder=""
+                                            value=""
+                                            ng-pattern="/^([A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}($|(\\s{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1}|(-{1}[A-ZŠĐČĆ]{1}[a-zšđčć]{2,12}){1})$/"
+                                            required="required">
+                                        <div
+                                            ng-show="checkDiffAddress && shippingForm.lastName.$invalid && shippingForm.lastName.$dirty"
+                                            class="text-danger text-justify">
+                                            <small>Prezime nije validno. Prezime ne može početi sa brojem ili malim slovom.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Email-->
+                            <div class="mb-3 form-group">
+                                <label for="email">Email:
+                                    <span class="text-muted">
+                                        <small>(Opcionalno)</small></span></label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input
+                                        ng-model="model.email"
+                                        name="email"
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="acorbo2@etf.unsa.ba"
+                                        ng-pattern="/^([A-Za-z0-9-+_.])+@([a-zA-Z0-9-.])+.(com|ba|etf.unsa.ba)$/">
+                                </div>
+                                <div
+                                    ng-show="checkDiffAddress && shippingForm.email.$invalid && shippingForm.email.$dirty"
+                                    class="text-danger text-justify">
+                                    <small>Email nije validan.</small>
+                                </div>
+
+                            </div>
+                            <!--Adresa-->
+                            <div class="mb-3 form-group">
+                                <label for="address">Adresa:</label>
+                                <input
+                                    ng-model="model.address"
+                                    name="address"
+                                    type="text"
+                                    class="form-control"
+                                    id="address"
+                                    placeholder="Hamdije Čemerlića 23"
+                                    ng-pattern="/^([A-ZŽŠĐĆČ]{1}[a-zšđžćč]{1,15}\s+){1,5}(b.b.|\d+)$/"
+                                    required="required">
+                                <div
+                                    ng-if="checkDiffAddress && shippingForm.address.$invalid && shippingForm.address.$dirty"
+                                    class="text-danger text-justify">
+                                    <small>Adresa nije validna. Adresa ne može početi sa brojem ili malim slovom.</small>
+                                </div>
+                            </div>
+                            <!--Grad-->
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label for="city">Grad:</label>
+                                        <select
+                                            ng-model="model.city"
+                                            name="city"
+                                            class="custom-select d-block w-100"
+                                            id="city"
+                                            required="required">
+                                            <option value="">Odabir...</option>
+                                            <option>Sarajevo</option>
+                                            <option>Tuzla</option>
+                                            <option>Zenica</option>
+                                            <option>Gračanica</option>
+                                        </select>
+                                        <div
+                                            ng-show="checkDiffAddress && shippingForm.city.$invalid && shippingForm.city.$touched"
+                                            class="text-danger">
+                                            <small>Grad je potrebno odabrati.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Naselje-->
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="settlement">Naselje:</label>
+                                        <select
+                                            ng-model="model.settlement"
+                                            name="settlement"
+                                            class="custom-select d-block w-100"
+                                            id="settlement"
+                                            required="required">
+                                            <option value="">Odabir...</option>
+                                            <option>Butmir</option>
+                                            <option>Stup</option>
+                                            <option>Hrasno</option>
+                                            <option>Nedžarići</option>
+                                        </select>
+                                        <div
+                                            ng-show="checkDiffAddress && shippingForm.settlement.$invalid && shippingForm.settlement.$touched"
+                                            class="text-danger">
+                                            <small>Naselje je potrebno odabrati.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--ZIP-->
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="zip">ZIP:</label>
+                                        <input
+                                            ng-model="model.zip"
+                                            name="zip"
+                                            type="text"
+                                            class="form-control"
+                                            id="zip"
+                                            placeholder="71000"
+                                            required="required"
+                                            ng-pattern="/^[0-9]{5}$/">
+                                        <div
+                                            ng-show="checkDiffAddress && shippingForm.zip.$invalid && shippingForm.zip.$dirty"
+                                            class="text-danger">
+                                            <small>ZIP nije validan. ZIP mora biti 5-cifreni broj.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Broj telefona-->
+                            <div class="form-group">
+                                <label for="telephone">Broj telefona:</label>
+                                <input
+                                    ng-model="model.telephone"
+                                    name="telephone"
+                                    type="tel"
+                                    class="form-control"
+                                    id="telephone"
+                                    placeholder="+38762/333-333"
+                                    required="required"
+                                    ng-pattern="/^[+][0-9]{5}\/[0-9]{3}-[0-9]{3,4}$/">
+                                <div
+                                    ng-show="checkDiffAddress && shippingForm.telephone.$invalid && shippingForm.telephone.$dirty"
+                                    class="text-danger">
+                                    <small>Format broja telefona nije validan.</small>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <hr class="mt-0">
+                        <!--Radio buttons-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 custom-control custom-radio text-center">
+                                    <input
+                                        id="freeShippment"
+                                        name="shippingMethod"
+                                        type="radio"
+                                        class="custom-control-input"
+                                        checked=""
+                                        required="required">
+                                    <label class="custom-control-label" for="freeShippment">Besplatna isporuka</label>
+                                    <div>
+                                        <small>U roku od 12h</small>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 custom-control custom-radio text-center">
+                                    <input
+                                        id="paidShippment"
+                                        name="shippingMethod"
+                                        type="radio"
+                                        class="custom-control-input"
+                                        required="required">
+                                    <label class="custom-control-label" for="paidShippment">Isporuka uz naplatu - 5 KM</label>
+                                    <div>
+                                        <small>U roku od 2h</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="mb-3">
+                        <!--Submit button-->
+                        <div class="mb-2">
+                            <button
+                                type="submit"
+                                class="btn btn-success custom"
+                                ng-disabled="checkDiffAddress && shippingForm.$invalid">Dalje</button>
+                            <a
+                                href="#/korpa"
+                                role="button"
+                                class="btn btn-danger custom"
+                                id="cancelOrderBtn">Nazad</a>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="col-sm-5">
+                    <h4>Račun</h4>
+                    <hr>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h6 class="text-justify">Naziv proizvoda: Lorem ipsum dolor.
+                                        {{model.name}}</h6>
+                                    <h6 class="text-justify">Kratak opis: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        {{model.decription}}</h6>
+                                    <h6 class="text-justify">Cijena: Lorem ips.
+                                        {{model.price}}</h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h6 class="text-justify">NAZIV: Lorem ipsum dolor.
+                                        {{model.name}}</h6>
+                                    <h6 class="text-justify">KRATAK OPIS: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        {{model.decription}}</h6>
+                                    <h6 class="text-justify">CIJENA: Lorem ips.
+                                        {{model.price}}</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>CIJENA BEZ PDV-a</h6>
+                            </div>
+                            <span class="text-muted">{{model.raw}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>PDV</h6>
+                            </div>
+                            <span class="text-muted">{{model.tax}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>ISPORUKA</h6>
+                            </div>
+                            <span class="text-muted">{{model.shippment}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6>POPUST</h6>
+                            </div>
+                            <span class="text-muted">{{model.discount}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>
+                                <strong>UKUPNO (BAM)</strong>
+                            </span>
+                            <strong>{{model.total}}</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Custom js-->
+        <script src="./js/shippingApp.js"></script>
+        <script src="./js/shippingController.js"></script>
+    </body>
+</html>

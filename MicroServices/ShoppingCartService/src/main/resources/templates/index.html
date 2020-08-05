@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ <head>
+     <title>Shopping cart</title>
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/template.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+     <meta charset="utf-8">    
+     <base href="/shopping-cart/">
+ </head>
+ <body ng-controller="mainController">
+    
+    <header ng-include="'pages/header.html'"></header>
+    
+    <main ng-view></main>
+
+    <footer ng-include="'pages/footer.html'"></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+    <script src="js/angular-css.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/shoppingCartModel.js"></script>
+    <script src="js/app/mainController.js"></script>
+    <script src="js/app/orderHistoryController.js"></script>
+    <script src="js/app/paymentController.js"></script>
+    <script src="js/app/shippingController.js"></script>
+    <script src="js/app/shoppingCartController.js"></script>
+ </body>
+ </html>

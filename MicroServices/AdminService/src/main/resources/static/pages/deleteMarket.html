@@ -1,0 +1,15 @@
+<div class="col-lg-10 offset-lg-1 col-12">
+    <form name="deleteMarketForm">
+        <input class="form-control mb-3" type="text" placeholder="Search" ng-model="deleteMarketFormValues.search">
+        <ul class="list-group" ng-repeat="market in markets">                            
+            <li class="list-group-item list-group-item-action" data-toggle="list" role="tab" ng-click="selectMarketID(market.id)">
+                <h5>{{market.name}}</h5>
+                <h6>{{market.email}}     |     {{market.contact}}</h6>
+                <h6>{{market.city}}     |     {{market.address}}</h6>
+            </li>
+        </ul>
+    </form>
+    <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg mt-3" ng-click='deleteMarket(deleteLocationID, deleteMarketID)'>Obriši</button>
+    <label class="font-italic alert-success col-lg-6 offset-lg-3 col-12" ng-show="successfulMarketReply">{{successfulMarketReply}}</label>
+    <label class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" ng-show="unsuccessfulMarketReply">{{unsuccessfulMarketReply}}</label>
+</div>

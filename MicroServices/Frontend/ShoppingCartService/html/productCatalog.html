@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="productCatalogApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!--Bootstrap-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <!--Font Awesome Icons-->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossorigin="anonymous">
+        <!--Custom CSS-->
+        <link href="../css/productCatalog.css" rel="stylesheet">
+    </head>
+    <body ng-controller="productCatalogController">
+
+        <div class="container">
+            <h2>
+                Market:
+                {{ model.market.naziv }}
+            </h2>
+
+            <hr>
+
+            <h3>
+                Kupovina
+            </h3>
+
+            <hr>
+
+            <div class="input-group md-form form-sm form-1 pl-0 mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text lighten-3" id="basic-text1">
+                        <i class="fas fa-search text-white" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <input
+                    class="form-control my-0 py-1"
+                    type="text"
+                    placeholder="Pretraga"
+                    aria-label="Search"
+                    ng-model="model.pretraga.naziv">
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-3 col-xl-3" ng-repeat="proizvod in model.proizvodi | filter:model.pretraga">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header text-center">
+                            <h4 class="my-0 font-weight-normal">{{ proizvod.naziv }}</h4>
+                        </div>
+                        <div>
+                            <img class="card-img-top" ng-src="{{ proizvod.url }}" alt="Ovo je neka slika.">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title pricing-card-title">{{ proizvod.cijena }}
+                            </h4>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>
+                                    <strong>Trenutno stanje:
+                                    </strong>{{ proizvod.stanje }}</li>
+                                <li>
+                                    <strong>Opis:
+                                    </strong>
+                                    {{ proizvod.opis }}
+                                </li>
+                            </ul>
+                            <button
+                                type="button"
+                                class="btn btn-block btn-outline-primary" ng-click="showShoppingCartNotification()">Dodaj u korpu
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shoppingCartNotification">Proizvod dodan u kropu!</div>
+    </div>
+
+    <!--Custom js-->
+    <script src="./js/productCatalogApp.js"></script>
+    <script src="./js/productCatalogController.js"></script>
+</body>
+</html>

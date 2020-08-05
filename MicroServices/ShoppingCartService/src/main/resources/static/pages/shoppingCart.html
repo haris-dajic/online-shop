@@ -1,0 +1,95 @@
+<div class="container" id="optionBar">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <strong class="active">1. Korpa</strong>
+        </div>
+        <div class="col-md-4 text-center">
+            <strong>2. Detalji isporuke</strong>
+        </div>
+        <div class="col-md-4 text-center">
+            <strong>3. Način plaćanja</strong>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-sm-7">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span>Korpa</span>
+                <span class="badge badge-warning badge-pill">{{ products.length }}</span>
+            </h4>
+            <hr>
+
+            <div ng-if="products.length === 0" class="jumbotron text-center">
+                <p class="lead">Korpa je trenutno prazna.</p>
+            </div>
+
+            <div id="detailsScrollBar" class="scrollbar-deep-purple bordered-deep-purple thin">
+                <ul class="list-group" ng-repeat="product in products">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div class="row">
+                            <div class="col-12">
+                                <h6 class="text-justify">Naziv:
+                                    {{product.name}}</h6>
+                                <h6 class="text-justify">Opis:
+                                    {{product.description}}</h6>
+                                <h6 class="text-justify">Količina:
+                                    {{product.amount}}</h6>
+                                <h6 class="text-justify">Cijena:
+                                    {{product.price * product.amount | number:2}} KM</h6>
+                                <button type="submit" class="btn btn-warning btn-sm" ng-click="lowerProductAmountByOne(product)">Smanji količinu</button>
+                                <button type="submit" class="btn btn-warning btn-sm" ng-click="removeProduct(product)">Ukloni stavku</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+                <hr class="mb-3">
+
+                <div class="mb-2">
+                    <a ng-href="shipping" id="nextBtn" ng-click="sendOrder()" role="button" class="btn btn-success custom">Dalje</a>
+                    <a ng-href="/market/productcatalog" role="button" class="btn btn-danger custom" ng-click="eraseOrder()" id="cancelOrderBtn">Poništi narudžbu</a>
+                </div>
+        </div>
+        <div class="col-sm-5">
+            <h4>Račun</h4>
+            <hr>
+            <form class="card p-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Kod za discount">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-success">Potvrdi kod</button>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6>CIJENA BEZ PDV-a</h6>
+                    </div>
+                    <span class="text-muted">{{price.priceWithoutVAT | number:2}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6>PDV</h6>
+                    </div>
+                    <span class="text-muted">{{price.VAT | number:2}}</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6>POPUST</h6>
+                    </div>
+                    <span class="text-muted">{{price.discount}} %</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                            <span>
+                                <strong>UKUPNO (KM)</strong>
+                            </span>
+                    <strong>{{price.total | number:2}}</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

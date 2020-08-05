@@ -1,0 +1,58 @@
+<div class="col-lg-10 offset-lg-1 col-12" >
+    <form name="selectMarketForProductAddingForm" ng-hide="addProductFormShown">
+        <input class="form-control mb-3" type="text" placeholder="Search">
+        <ul class="list-group" ng-repeat="market in markets">                            
+            <li class="list-group-item list-group-item-action" ng-click="showAddProductForm(market.id)">
+                <h5>{{market.name}}</h5>
+                <h6>{{market.email}}     |     {{market.contact}}</h6>
+                <h6>{{market.city}}     |     {{market.address}}</h6>
+            </li>                            
+        </ul>
+    </form>
+    <form name="addProductForm" ng-show="addProductFormShown">
+        <div class='form-group'>
+            <label class="font-weight-bold">Naziv:</label>
+            <input type="text" class="form-control" name="name" ng-model="addProductFormValues.name" ng-required='true' ng-pattern='/^[A-ZČĆŽŠĐ][A-Za-z0-9\\s-čČćĆžŽšŠđĐ]*/' placeholder="Naziv"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.name.$touched || addProductForm.$submitted) && addProductForm.name.$error.required">Neophodno!</small>
+            <small class="form-text text-danger" ng-show="(addProductForm.name.$touched || addProductForm.$submitted) && addProductForm.name.$error.pattern">Neispravan unos namea!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Kategorija:</label>
+            <input type="text" class="form-control" name="category" ng-model="addProductFormValues.category" ng-required='true' ng-pattern='/^[A-Z][A-Za-z0-9\\s-čČćĆžŽšŠđĐ]*/' placeholder="Kategorija"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.category.$touched || addProductForm.$submitted) && addProductForm.category.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Količina:</label>
+            <input type="number" class="form-control" name="amount" ng-model="addProductFormValues.amount" ng-required='true' placeholder="Količina"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.amount.$touched || addProductForm.$submitted) && addProductForm.amount.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Cijena:</label>
+            <input type="number" step="any" class="form-control" name="price" ng-model="addProductFormValues.price" ng-required='true' placeholder="Cijena" min="0"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.price.$touched || addProductForm.$submitted) && addProductForm.price.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Akcijski procenat:</label>
+            <input type="number" step="any" class="form-control" name="discount" ng-model="addProductFormValues.discount" ng-required='true' placeholder="Akcijski procenat" min="0" max="100"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.discount.$touched || addProductForm.$submitted) && addProductForm.discount.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Barkod:</label>
+            <input type="text" class="form-control" name="barcode" ng-model="addProductFormValues.barcode" ng-required='true' ng-pattern='/[0-9]{8,}/' placeholder="Barkod"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.barcode.$touched || addProductForm.$submitted) && addProductForm.barcode.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Detalji:</label>
+            <input type="text" class="form-control" name="description" ng-model="addProductFormValues.description" ng-required='true' placeholder="Detalji"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.description.$touched || addProductForm.$submitted) && addProductForm.description.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">URL slike:</label>
+            <input type="text" class="form-control" name="imageURL" ng-model="addProductFormValues.imageURL" ng-required='true' placeholder="URL slike"/>
+            <small class="form-text text-danger" ng-show="(addProductForm.imageURL.$touched || addProductForm.$submitted) && addProductForm.imageURL.$error.required">Neophodno!</small>
+        </div>
+        <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg" ng-click='addProduct(addProductFormValues)'>Add</button>
+        <label class="font-italic alert-success col-lg-6 offset-lg-3 col-12" ng-show="successfulProductReply">{{successfulProductReply}}</label>
+        <label class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" ng-show="unsuccessfulProductReply">{{unsuccessfulProductReply}}</label>
+    </form>
+</div>

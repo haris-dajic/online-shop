@@ -1,0 +1,1 @@
+var shoppingCartApp = angular.module('shoppingCartApp', []);

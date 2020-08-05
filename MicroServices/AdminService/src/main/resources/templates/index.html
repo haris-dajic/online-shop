@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ <head>
+     <title>Admin Page</title>
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/index.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+     <meta charset="utf-8">    
+     <base href="/admin/">
+ </head>
+
+ <body>
+    <header ng-include="'pages/header.html'"></header>
+
+    <div class="container pb-3 mt-5 mb-5" ng-controller="adminController">
+        <!-- Product and Market tabs -->
+        <ul class="nav nav-pills nav-justified col-12 col-xl-8 col-lg-8 offset-lg-2 pt-3" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" ng-click="tabFunction('product')" role="tab">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" ng-click="tabFunction('market')" role="tab">Market</a>
+            </li>
+        </ul>
+        <!-- Add, Update and Delete tabs for Product and Market -->
+        <div class="tab-content col-12 col-xl-8 col-lg-8 offset-lg-2 mt-4" ng-show="link">
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" ng-href="{{link}}/add" ng-class="{active:isActive(1)}" ng-click="selectTab(1)" role="tab">Dodaj</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" ng-href="{{link}}/delete" ng-class="{active:isActive(2)}" ng-click="selectTab(2)" role="tab">Obriši</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" ng-href="{{link}}/update" ng-class="{active:isActive(3)}" ng-click="selectTab(3)" role="tab">Update</a>
+                </li>
+            </ul>                                   
+        </div>
+        <div class="jumbotron col-12 col-xl-8 col-lg-8 offset-lg-2 mt-4 pt-5" ng-show="tabs">    
+            <div ng-controller="adminProductController">
+            <div ng-controller="adminMarketController">        
+                <main ng-view></main>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <footer ng-include="'pages/footer.html'"></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/productService.js"></script>
+    <script src="js/app/marketService.js"></script>
+    <script src="js/app/adminController.js"></script>
+    <script src="js/app/adminProductController.js"></script>
+    <script src="js/app/adminMarketController.js"></script>
+ </body>
+</html>

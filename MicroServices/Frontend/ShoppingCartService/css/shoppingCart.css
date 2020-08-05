@@ -1,0 +1,31 @@
+#inputQuantity {
+    text-align: center;
+}
+
+.custom {
+    width: 145px !important;
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+  #optionBar {
+    padding: 20px;
+}
+
+#optionBar div {
+    font-size: 26px;
+}
+#optionBar a, strong {
+    color: gray;
+}
+
+#optionBar a:hover {
+    color: black !important;
+    text-decoration: none;
+}

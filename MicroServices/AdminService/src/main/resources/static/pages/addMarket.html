@@ -1,0 +1,37 @@
+<div class="col-lg-10 offset-lg-1 col-12">
+    <form name="addMarketForm">
+        <div class='form-group'>
+            <label class="font-weight-bold">Naziv:</label>
+            <input type="text" class="form-control" name="name" ng-model="addMarketFormValues.name" ng-required='true' placeholder="Naziv"/>
+            <small class="form-text text-danger" ng-show="(addMarketForm.name.$touched || addMarketForm.$submitted) && addMarketForm.name.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Kontakt:</label>
+            <input type="text" class="form-control" name="contact" ng-model="addMarketFormValues.contact" ng-required='true' placeholder="Kontakt"/>
+            <small class="form-text text-danger" ng-show="(addMarketForm.contact.$touched || addMarketForm.$submitted) && addMarketForm.contact.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Email:</label>
+            <input type="email" class="form-control" name="email" ng-model="addMarketFormValues.email" ng-required='true'  placeholder="Email"/>
+            <small class="form-text text-danger" ng-show="(addMarketForm.email.$touched || addMarketForm.$submitted) && addMarketForm.email.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Grad:</label>
+            <input type="text" class="form-control" name="city" ng-model="addMarketFormValues.city" ng-required='true' placeholder="Grad"/>
+            <small class="form-text text-danger" ng-show="(addMarketForm.city.$touched || addMarketForm.$submitted) && addMarketForm.city.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">Adresa:</label>
+            <input type="text" class="form-control" name="address" ng-model="addMarketFormValues.address" ng-required='true'  placeholder="Adresa"/>
+            <small class="form-text text-danger" ng-show="(addMarketForm.address.$touched || addMarketForm.$submitted) && addMarketForm.address.$error.required">Neophodno!</small>
+        </div>
+        <div class='form-group'>
+            <label class="font-weight-bold">URL slike:</label>
+            <input type="text" class="form-control" name="imageURL" ng-model="addMarketFormValues.imageURL" ng-required='true' placeholder="URL slike"/>
+            <small class="form-text text-danger" ng-show="(addMarketForm.imageURL.$touched || addMarketForm.$submitted) && addMarketForm.imageURL.$error.required">Neophodno!</small>
+        </div>
+        <button type='submit' class="btn btn-success col-lg-6 offset-lg-3 col-12 btn-lg" ng-click='addMarket(addMarketFormValues)'>Add</button>
+        <label class="font-italic alert-success col-lg-6 offset-lg-3 col-12" ng-show="successfulMarketReply">{{successfulMarketReply}}</label>
+        <label class="font-italic alert-danger col-lg-6 offset-lg-3 col-12" ng-show="unsuccessfulMarketReply">{{unsuccessfulMarketReply}}</label>
+    </form>
+</div>

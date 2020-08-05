@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+.container {
+    background-color: white;
+}
+
+.nav-pills .nav-item .nav-link:not(.active){
+    background-color: ghostwhite;
+    color: mediumseagreen; 
+}
+
+.nav-pills .nav-item .nav-link:not(.active):hover{
+    background-color: rgb(237, 237, 250);
+}
+
+.nav-pills .nav-item .nav-link{
+    background-color: mediumseagreen;
+}
+
+.list-group-item.active{
+    background-color: mediumseagreen;
+    border: 0;
+}

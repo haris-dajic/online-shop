@@ -1,0 +1,57 @@
+<div ng-controller="adminController" class="containter d-flex flex column" id="mainWrapper">
+    <nav
+            class="navbar navbar-expand-lg fixed-top navbar-light bg-light"
+            id="navBar">
+
+        <a class="navbar-brand" href="/market/">
+            <i class="fas fa-store"></i>
+            Online Market
+        </a>
+
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto"> 
+                <li class="nav-item" ng-show="user.role === 'ADMIN'">
+                    <a class="nav-link" href="/admin">Admin</a>
+                </li>                   
+                <li class="nav-item">
+                    <a class="nav-link" href="/market/">Marketi
+                        <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/market/productcatalog">Kupovina</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shopping-cart/orderhistory">Historija narudžbi</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">{{user.username}}
+                            <span class="sr-only"></span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Profile</a>                                
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item" id="korpaListItem">
+                    <a class="btn btn-outline-dark btn-sm" href="/shopping-cart/" role="button">
+                        <i class="fas fa-shopping-cart"></i>
+                        Korpa
+                    </a>
+                </li>                    
+            </ul>
+        </div>
+    </nav>
+</div>
+<hr>

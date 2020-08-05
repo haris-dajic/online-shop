@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MarketInfoService:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fe6e81c4-744d-4e81-8f05-efe66a36d2c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../AdminService/src/main/java/com/OnlineMarket/AdminService/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AdminService/src/main/java/com/OnlineMarket/AdminService/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminService/src/main/java/com/OnlineMarket/AdminService/Controllers/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AdminService/src/main/java/com/OnlineMarket/AdminService/Controllers/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminService/src/main/resources/static/js/app/adminMarketController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AdminService/src/main/resources/static/js/app/adminMarketController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminService/src/main/resources/static/js/app/adminProductController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AdminService/src/main/resources/static/js/app/adminProductController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminService/src/main/resources/static/js/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AdminService/src/main/resources/static/js/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AdminService/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../AdminService/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/java/com/onlineMarket/EurekaDiscoveryService/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/java/com/onlineMarket/EurekaDiscoveryService/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/java/com/onlineMarket/EurekaDiscoveryService/Controllers/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/java/com/onlineMarket/EurekaDiscoveryService/Controllers/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/java/com/onlineMarket/EurekaDiscoveryService/Security/AppSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/java/com/onlineMarket/EurekaDiscoveryService/Security/AppSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/static/js/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/static/js/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/static/js/app/loginController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../EurekaDiscoveryService/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app/marketInfoApp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app/marketInfoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/app/marketInfoController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app/productCatalogApp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app/productCatalogController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/app/productCatalogController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productCatalog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/onlineMarket/MarketInfoService/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/onlineMarket/MarketInfoService/Controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/onlineMarket/MarketInfoService/Controller/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/onlineMarket/MarketInfoService/Controller/WebController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app/marketInfoApp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app/marketInfoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/app/marketInfoController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app/productCatalogApp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app/productCatalogController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/app/productCatalogController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productCatalog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/js/app/initializationService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/js/app/paymentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/js/app/paymentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/js/app/shippingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/js/app/shippingController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/js/app/shoppingCartController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/js/app/shoppingCartController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/pages/shoppingCart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/static/pages/shoppingCart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ShoppingCartService/src/main/resources/templates/index.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/MarketInfoService$Application.ic" NAME="Application Coverage Results" MODIFIED="1565537380068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="221" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServiceSubscriber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1848">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/WebController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServiceSubscriberConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2244">
+              <caret line="104" column="102" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="102" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Market.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+              <folding>
+                <element signature="e#1229#1230#0" expanded="true" />
+                <element signature="e#1254#1255#0" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="e#1314#1315#0" expanded="true" />
+                <element signature="e#1345#1346#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1707#1708#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
+                <element signature="e#2021#2022#0" expanded="true" />
+                <element signature="e#2385#2386#0" expanded="true" />
+                <element signature="e#2415#2416#0" expanded="true" />
+                <element signature="e#2685#2686#0" expanded="true" />
+                <element signature="e#2713#2714#0" expanded="true" />
+                <element signature="e#2990#2991#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
+                <element signature="e#3068#3069#0" expanded="true" />
+                <element signature="e#3108#3109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServicePublisher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1562">
+              <caret line="82" column="5" selection-start-line="64" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServicePublisherConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+              <folding>
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/ProductAmount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+                <element signature="e#1316#1317#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+                <element signature="e#1463#1464#0" expanded="true" />
+                <element signature="e#1492#1493#0" expanded="true" />
+                <element signature="e#1535#1536#0" expanded="true" />
+                <element signature="e#1571#1572#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>korisnik</find>
+      <find>SalePercentage</find>
+      <find>Details</find>
+      <find>Created</find>
+      <find>Product</find>
+      <find>product</find>
+      <find>marketi</find>
+      <find>adresa</find>
+      <find>System</find>
+      <find>TopicExchange</find>
+      <find>Topic</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>user</replace>
+      <replace>Discount</replace>
+      <replace>Description</replace>
+      <replace>Deleted</replace>
+      <replace>market</replace>
+      <replace>ProductAmount</replace>
+      <replace>Market</replace>
+      <replace>markets</replace>
+      <replace>address</replace>
+      <replace>FanoutExchange</replace>
+      <replace>DirectExchange</replace>
+      <replace>Direct</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/MarketsInfoService/Models/Market.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/MarketsInfoService/Models/Lokacija.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/dodajLokaciju.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/dodajLokaciju.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/ApiError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Lokacija.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Service/MarketService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/MarketInfoServicePublisherConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/MarketInfoServicePublisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/OrderHistoryServiceSubscriberConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Service/LokacijaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/ServiceImplementation/LokacijaServiceImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/LokacijaController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/app/marketInfoApp.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/app/templateApp.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/marketInfo.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/orderHistory.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/template.css" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/MarketsInfo.http" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/ServiceImplementation/MarketServiceImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/LokacijaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Korisnik.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/KorisnikRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/MarketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidCityException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/MarketInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidSalePercentageException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/ProductRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/ProductAmountInMarket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/ProductAmountInMarketRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/MarketRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/app/marketInfoController.js" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/ProductAmountRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/ProductAmount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Market.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServicePublisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServicePublisherConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServiceSubscriberConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServiceSubscriber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/ActiveParameters.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/productCatalog.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/WebController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="MarketInfoService" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-29" />
+    <option name="y" value="-29" />
+    <option name="width" value="838" />
+    <option name="height" value="638" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="Communication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MarketInfoService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MarketInfoService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565470451299" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AdminService" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Haris Dajić\Desktop\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\resources\static\js\app" />
+      <recent name="C:\Users\Haris Dajić\Desktop\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\resources\static\js" />
+      <recent name="C:\Users\Haris Dajić\Desktop\NWT najnovije\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\resources\static\js\app" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/static" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.onlineMarket.MarketInfoService" />
+      <recent name="com.onlineMarket" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.onlineMarket.MarketInfoService.Repositories" />
+      <recent name="com.onlineMarket.MarketInfoService.Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mustafa\Desktop\NWT_Projekat_Tim19-master\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\resources\templates" />
+      <recent name="C:\Users\Mustafa\Desktop\NWT_Projekat_Tim19-master\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\resources\static\css" />
+      <recent name="C:\Users\Mustafa\Desktop\NWT_Projekat_Tim19-master\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\resources\static\js\app" />
+      <recent name="C:\Users\Mustafa\Desktop\NWT_Projekat_Tim19-master\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\java\com\onlineMarket\MarketInfoService\Models" />
+      <recent name="C:\Users\Mustafa\Desktop\NWT_Projekat_Tim19-master\NWT_Projekat_Tim19\MicroServices\MarketInfoService\src\main\java\com\onlineMarket\MarketInfoService\CustomExceptionHandlers" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8086/getallmarkets" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean " />
+      <command value="mvn clean install" />
+      <command value="mvn clean install -Dmaven.test.skip=true" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.013716525" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="MarketsInfo#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/MarketsInfo.http">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="MarketsInfoService" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="MarketsInfoService" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="MarketInfoService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.onlineMarket.MarketInfoService.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketsInfo" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="MarketInfoService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.onlineMarket.MarketInfoService.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.MarketsInfo" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe6e81c4-744d-4e81-8f05-efe66a36d2c3" name="Default Changelist" comment="" />
+      <created>1553766107201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553766107201</updated>
+      <workItem from="1553766110935" duration="11986000" />
+      <workItem from="1553883068775" duration="1496000" />
+      <workItem from="1553888765319" duration="2760000" />
+      <workItem from="1553891593984" duration="678000" />
+      <workItem from="1553892917889" duration="4371000" />
+      <workItem from="1553931143819" duration="22000" />
+      <workItem from="1554014317822" duration="3244000" />
+      <workItem from="1554017649800" duration="1456000" />
+      <workItem from="1554019151580" duration="475000" />
+      <workItem from="1554019664728" duration="1249000" />
+      <workItem from="1554020947974" duration="1602000" />
+      <workItem from="1554025208071" duration="165000" />
+      <workItem from="1554025636539" duration="66000" />
+      <workItem from="1554368088162" duration="2178000" />
+      <workItem from="1554933754060" duration="378000" />
+      <workItem from="1555157930282" duration="115000" />
+      <workItem from="1555158545217" duration="599000" />
+      <workItem from="1555175234933" duration="8666000" />
+      <workItem from="1555433252750" duration="797000" />
+      <workItem from="1555579394144" duration="475000" />
+      <workItem from="1556045720852" duration="4018000" />
+      <workItem from="1557964210816" duration="2969000" />
+      <workItem from="1557973853516" duration="1589000" />
+      <workItem from="1558006128744" duration="645000" />
+      <workItem from="1558007230174" duration="11000" />
+      <workItem from="1558007487292" duration="871000" />
+      <workItem from="1558257418765" duration="48000" />
+      <workItem from="1558258934032" duration="256000" />
+      <workItem from="1558260049172" duration="50000" />
+      <workItem from="1560100428956" duration="207000" />
+      <workItem from="1560100828611" duration="6680000" />
+      <workItem from="1560257152365" duration="12291000" />
+      <workItem from="1560311358485" duration="10737000" />
+      <workItem from="1560398715819" duration="27978000" />
+      <workItem from="1560513310436" duration="244000" />
+      <workItem from="1565203243063" duration="1221000" />
+      <workItem from="1565256068560" duration="4271000" />
+      <workItem from="1565289409642" duration="1651000" />
+      <workItem from="1565342489907" duration="4206000" />
+      <workItem from="1565443497626" duration="9434000" />
+      <workItem from="1565532275630" duration="5890000" />
+      <workItem from="1565561781201" duration="4915000" />
+      <workItem from="1565808964314" duration="2521000" />
+      <workItem from="1565867484370" duration="2233000" />
+      <workItem from="1566233093373" duration="9375000" />
+      <workItem from="1566291494428" duration="5148000" />
+      <workItem from="1566297642644" duration="9170000" />
+      <workItem from="1566379670707" duration="9442000" />
+      <workItem from="1566465422263" duration="3564000" />
+      <workItem from="1566542604344" duration="5060000" />
+      <workItem from="1566675121999" duration="737000" />
+      <workItem from="1566812814541" duration="4297000" />
+      <workItem from="1566978836479" duration="773000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="195280000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1618" height="917" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22564103" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29107374" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32858992" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32858992" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32858992" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32988358" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3260026" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32858992" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32858992" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.29754204" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3294621" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="10" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.32948717" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/marketInfo.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/marketInfo.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/MarketsInfo.http" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Service/LokacijaService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/ServiceImplementation/LokacijaServiceImplementation.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/LokacijaRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/KorisnikRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/LokacijaController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Korisnik.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Lokacija.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidAddressException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidContactException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidEmailException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidNameException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidCityException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Service/MarketService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/MarketInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/ServiceImplementation/MarketServiceImplementation.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidDiscountException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidAmountException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidBarcodeException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidCategoryException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/CustomExceptionHandlers/InvalidPriceException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/productCatalog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/MarketRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/ProductRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.5.RELEASE/spring-webmvc-5.1.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app/marketInfoController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Repositories/ProductAmountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app/marketInfoApp.js" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.1.5.RELEASE/spring-messaging-5.1.5.RELEASE.jar!/org/springframework/messaging/handler/invocation/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/app/productCatalogController.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/ActiveParameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="70" column="63" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/productCatalog.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServiceSubscriber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServiceSubscriberConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="104" column="102" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding>
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#2415#2416#0" expanded="true" />
+            <element signature="e#2685#2686#0" expanded="true" />
+            <element signature="e#2713#2714#0" expanded="true" />
+            <element signature="e#2990#2991#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="true" />
+            <element signature="e#3108#3109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServicePublisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1562">
+          <caret line="82" column="5" selection-start-line="64" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Communication/MarketInfoServicePublisherConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+          <folding>
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Models/ProductAmount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1463#1464#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1571#1572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/onlineMarket/MarketInfoService/Controller/WebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>MarketInfoService:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MarketInfoService</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
